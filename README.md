@@ -92,26 +92,36 @@ Bcrypt
 
 ⚙️ Installation & Setup
 1. Clone the repository
-git clone https://github.com/yourusername/your-project.git
-cd your-project
+https://github.com/abdessamademoussaif/EasyTran-project
+cd EasyTran-project
 
 Frontend Setup
+
 cd frontend
+
 npm install
+
 npm run dev
 
 Backend Setup
+
 cd backend
+
 npm install
+
 npm start
 
 
 Create a .env file with:
 
 MONGO_URI=your_mongo_connection
+
 JWT_SECRET=your_secret_key
+
 EMAILJS_KEY=your_key
+
 EMAILJS_TEMPLATE=your_template
+
 EMAILJS_SERVICE=your_service
 
 🚀 Deployment
