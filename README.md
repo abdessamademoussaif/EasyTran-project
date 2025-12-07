@@ -1,146 +1,147 @@
-🚗 Vehicle Booking Management System
+# - Vehicle Booking Management System
 
-A full-stack vehicle reservation and management platform built with a modern React frontend and a secure Node.js backend. The system allows users to browse vehicles, make bookings, manage accounts, and handle reservations in an intuitive interface designed for real-world fleet or rental management operations.
+A full-stack platform for managing and booking vehicles. The system allows users to browse available vehicles, view details, make reservations, and manage their accounts. Administrators can manage vehicles, users, and bookings through a secure dashboard.
 
-✨ Features
-Frontend (React + Vite)
+---
 
-⚡ Vite for fast development and optimized builds
+## - Description
 
-🎨 Tailwind CSS for modern, responsive UI
+This project consists of a **React + Vite frontend** and a **Node.js + Express + MongoDB backend**.  
+It includes user authentication with JWT & Passport.js, responsive UI with Tailwind CSS and shadcn/ui, and email support via EmailJS.
 
-🧩 shadcn/ui for polished and reusable components
+The system is built to be fast, scalable, and suitable for real-world fleet or rental management use cases.
 
-🔔 Notification system (toast)
+---
 
-🔐 Integration with backend authentication
+## - Getting Started
 
-🚘 Vehicle listing, details, and booking pages
+### - Dependencies
 
-📱 Fully responsive design
+#### **Frontend**
+- Node.js 18+
+- npm or pnpm
+- Modern browser
 
-Backend (Node.js + Express.js)
+#### **Backend**
+- Node.js 18+
+- MongoDB database 
+- EmailJS account (for email services)
 
-📦 RESTful API architecture
+---
 
-🗄️ MongoDB with Mongoose for data modeling
+## - Installing
 
-🔐 Authentication using JWT + Passport.js
-
-✉️ EmailJS for sending verification or notification emails
-
-🚦 Route protection with middleware
-
-🔄 CRUD operations for vehicles, users, and reservations
-
-🛠️ Tech Stack
-Frontend
-
-React.js
-
-Vite
-
-Tailwind CSS
-
-shadcn/ui
-
-Axios
-
-React Router
-
-Backend
-
-Node.js
-
-Express.js
-
-MongoDB / Mongoose
-
-Passport.js
-
-JSON Web Tokens (JWT)
-
-EmailJS
-
-Bcrypt
-
-📂 Project Structure
-/frontend
-  📦frontend
- ┣ public
- ┣ src
- ┃ ┣ add-listing
- ┃ ┣ assets
- ┃ ┣ components
- ┃ ┣ lib
- ┃ ┣ listing-details
- ┃ ┣ profile-setting
- ┃ ┣ redux
- ┃ ┣ reservation-details
- ┃ ┣ Shared
- ┃ ┣ update-vehicle
-
-/backend
- ┣ config
- ┣ middlewares
- ┣ models
- ┣ routes
- ┣ services
- ┣ uploads
- ┣ utils
- ┗ server.js
-
-⚙️ Installation & Setup
-1. Clone the repository
-https://github.com/abdessamademoussaif/EasyTran-project
+### **Clone the project**
+```bash
+git clone https://github.com/abdessamademoussaif/EasyTran-project.git 
 cd EasyTran-project
+```
 
-Frontend Setup
+---
 
+## - Frontend Setup
+
+```bash
 cd frontend
-
 npm install
-
 npm run dev
+```
 
-Backend Setup
+---
 
+## - Backend Setup
+
+```bash
 cd backend
-
 npm install
-
 npm start
+```
 
+### **Environment Variables**
 
-Create a .env file with:
+Create a `.env` file inside `/backend`:
 
+```
 MONGO_URI=your_mongo_connection
+JWT_SECRET=your_jwt_secret
+EMAILJS_USER=your_emailjs_user_id
+EMAILJS_SERVICE=your_emailjs_service_id
+EMAILJS_TEMPLATE=your_emailjs_template_id
+```
 
-JWT_SECRET=your_secret_key
+---
 
-EMAILJS_KEY=your_key
+## - Executing Program
 
-EMAILJS_TEMPLATE=your_template
+### **Start Frontend**
+```bash
+npm run dev
+```
 
-EMAILJS_SERVICE=your_service
+### **Start Backend**
+```bash
+npm start
+```
 
-🚀 Deployment
+Access the app in your browser:  
+```
+http://localhost:5173
+```
 
-Both frontend and backend are structured for deployment on platforms like:
+Backend API runs on:  
+```
+http://localhost:5000
+```
 
-Vercel
+---
 
-Netlify
+## - Help
 
-Render
+Common issues:
 
-Railway
+### **MongoDB connection error**
+Check:
+```
+MONGO_URI in .env
+```
+Ensure your IP is whitelisted if using MongoDB Atlas.
 
-AWS / DigitalOcean
+### **CORS issues**
+Make sure the backend has:
+```js
+app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+```
 
-📸 Screenshots
+### **Email not sending**
+Verify your EmailJS keys and template.
+
+---
+
+## - Authors
+
+**Abdessamade Moussaif**  
+GitHub: https://github.com/abdessamademoussaif
+E-mail: abdessamademoussaif@gmail.com
 
 
-📜 License
+---
 
-This project is licensed under the MIT License.
+## - License
+
+This project is licensed under the **MIT License** — see the LICENSE file for details.
+
+---
+
+## - Acknowledgments
+
+Thanks to the creators of tools and libraries used in this project:
+
+- React  
+- Vite  
+- Tailwind CSS  
+- shadcn/ui  
+- Express.js  
+- MongoDB  
+- JWT  
+- Passport.js  
+- EmailJS  
